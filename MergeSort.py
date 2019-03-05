@@ -27,8 +27,11 @@ def mergesort(mergelist):
       mergelist[k] = righthalf[j] #Makes mergelist[k] = righthalf[j], adds 1 to j, adds 1 to k
       j+=1
       k+=1
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 #Main Program
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 mergelist = input("Enter the list of numbers: ").split() #Asks for the list of integers and splits them
+for i in range(0, len(mergelist)): #These two lines make it so any number can be used
+  mergelist[i] = int(mergelist[i])
 mergesort(mergelist) #Mergesorts the list
 print(mergelist) #Prints the new list
